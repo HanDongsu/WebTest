@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width,minimum-scale=1,initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="zigbang.css">
+<title>ZigbangTest</title>
+</head>
+<body>
+	<div class="wrap">
+	
+		<div class="header">
+			<div class="icon-wrap">
+				<a class="back-btn" href="#"><img src="i-img/left-arrow.png" alt="back_Arrow"></a>
+				<p class="r_addr"></p>
+				<a class="like-btn" href="#"><img src="i-img/favorite.png" alt="favorite_button"></a>
+				<a class="share-btn" href="#"><img src="i-img/share.png" alt="share_button"></a>
+			</div>
+		</div>
+		
+		<div class="container">
+		
+			<div id="sliderWrapper">
+				<div id="sliderVwport">
+					<ul id="imgSlider" data-index="0">
+					</ul>
+				</div>
+				<button id="back">&#10094;</button>
+				<button id="next">&#10095;</button>
+				<div class="safe_agent_enroll">
+					<img src="i-img/img_ansim_logo.png" alt="안심로고"><span>TM</span>
+					<p>가 등록한 방입니다.</p>
+					<a href=""><img src="i-img/question.png"
+						style="width: 20px; height: 20px;" alt="question_mark"></a>
+				</div>
+			</div>
+			
+			<div class="room_Info_wrap">
+				<p class="r_intro"></p>
+				
+				<table id="room_Info">
+					<tbody>
+						<tr>
+							<td class="td_l">보증금</td>
+							<td class="td_r r_deposit"><strong></strong> 만원</td>
+						</tr>
+						<tr>
+							<td class="td_l">월세</td>
+							<td class="td_r r_rentsCost"><strong></strong> 만원</td>
+						</tr>
+						<tr class="ud_line">
+							<td class="td_l">등록번호</td>
+							<td class="td_r r_id"></td>
+						</tr>
+						<tr>
+							<td class="td_l">주소</td>
+							<td class="td_r r_address"></td>
+						</tr>
+						<tr>
+							<td class="td_l">인근전철역</td>
+							<td class="td_r r_nearStation"></td>
+						</tr>
+						<tr>
+							<td class="td_l">층/건물층수</td>
+							<td class="td_r r_floor"></td>
+						</tr>
+						<tr>
+							<td class="td_l">크기</td>
+							<td class="td_r r_size"></td>
+						</tr>
+						<tr>
+							<td class="td_l">구조</td>
+							<td class="td_r r_structure"></td>
+						</tr>
+						<tr class="ud_line">
+							<td class="td_l">건물형태</td>
+							<td class="td_r r_form"></td>
+						</tr>
+						<tr>
+							<td class="td_l">옵션</td>
+							<td class="td_r r_option"></td>
+						</tr>
+						<tr>
+							<td class="td_l">관리비</td>
+							<td class="td_r r_maintenance"></td>
+						</tr>
+						<tr>
+							<td class="td_l">관리비 포함항목</td>
+							<td class="td_r r_maintenanceAdd"></td>
+						</tr>
+						<tr>
+							<td class="td_l">주차</td>
+							<td class="td_r r_parking"></td>
+						</tr>
+						<tr>
+							<td class="td_l">엘리베이터</td>
+							<td class="td_r r_elevator"></td>
+						</tr>
+						<tr>
+							<td class="td_l">입주 가능일</td>
+							<td class="td_r r_date"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="other_info">
+					<p>상세설명</p>
+					<div class="r_desc"></div>
+				</div>
+				
+				<div class="other_info">
+					<p>담당자 한마디</p>
+					<div class="agent_word"></div>
+				</div>
+				
+				<div class="other_info">
+					<p>건물정보</p>
+					<div class="office_info">
+						<div class="office_img">
+							<img id="office_img" src="" alt="건물사진">
+						</div>
+						<div class='office_info_wrap'>
+							<p id="office_name"></p>
+							<p id="office_addr"></p>
+							<p id="office_floor"></p>
+							<p id="office_rooms"></p>
+							<p id="office_est"></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="other_info" id="daum_Map">
+					<p>위치보기</p>
+					<div class="map_info">
+						<div id="map_container" class="view_map">
+							<div class="map" id="map" style="width: 100%; height: 100%"></div>
+              <div class="map_btn" id="btnMap_see" data-bool="true">
+                <div class="btnMap_wrap">
+	                <img id="map-img" src="i-img/map.png" alt="map">
+                  <span id="m_see">지도보기</span>
+                </div>
+              </div>
+							<div class="map_btn" id="btnRoadview_see" data-bool="false">
+							  <div class="btnRv_wrap">
+								  <img id="dongdong-img" src="i-img/mapworker.png" alt="dongdong">
+								  <span id="rv_see">로드뷰보기</span>
+							  </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="agent_Info">
+					<p>중개사정보</p>
+					<div class="agent_Info_wrap">
+						<div class="agent_Info">
+							<div class="agent_img_wrap">
+								<img class="agent_img" alt="중개사사진" src=""
+									style="width: 99px; height: 99px;">
+								<div class="safe-tag">
+									<img src="i-img/img_ansim_logo.png" alt="ansim_logo">
+								</div>
+							</div>
+							<div class="agent_profile">
+								<p>
+									<b>대표공인중개사(<span class="agent_name"></span>)
+									</b>
+								</p>
+								<p class="agent_email"
+									style="color: #666666; font-weight: lighter;"></p>
+								<p class="agent_tel"
+									style="color: #666666; font-weight: lighter;"></p>
+							</div>
+						</div>
+						<div class="a_office_Info">
+							<p>
+								<b>중개사무소 정보</b>
+							</p>
+							<ul>
+								<li id="office_address"
+									style="color: #666666; font-weight: lighter;"></li>
+								<li id="office_call"
+									style="color: #666666; font-weight: lighter;">대표번호 : <span></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="agent_CMT">
+					<div class="agent_comment">
+						이 방은 <b>공인중개사 등록한 중개매물</b>입니다.<br> 공인 중개사를 통해 <b>안전하게 계약</b>할
+						수 있으며, <b>법정 중개 보수가 발생</b>합니다.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="inquiry">
+				<p class="inquiry_office"></p>
+				<p class="inquiry_agent"></p>
+				<p class="inquiry_tel"></p>
+				<strong>중개</strong>
+			</div>
+			<a class="tel_Btn" href=""><img src="i-img/call.png" alt="call_button">문의하기</a>
+		</div>
+		
+		<!-- 이미지 모달 -->
+		<div id="Modal-Wrap">
+			<div class="modal-conts">
+				<div class="mcWrap">
+					<div id='modal-head'>
+						<div id='modal_closeBtn'>x</div>
+					</div>
+					<div class="modal_img"></div>
+				</div>
+				<button class="modal_back">&#10094;</button>
+				<button class="modal_next">&#10095;</button>
+			</div>
+		</div>
+		<!-- 지도 모달 -->
+		<div id="modal_map">
+		  <div id="mm_cbt_wrap">
+		    <span id="mm_cbt">x</span>
+		  </div>
+		  <div id="mm_wrap">
+				<div id="mm_container" class="view_map">
+		      <div id="mapWrapper" style="width:100%;height:100%;position:relative;">
+            <div class="map" id="mm_map" style="width:100%;height:100%"></div> <!-- 지도를 표시할 div 입니다 -->
+            <input type="button" id="btnRoadview" onclick="toggleMap('false')" title="로드뷰 보기" value="로드뷰">
+          </div>
+          <div id="rvWrapper" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+            <div id="roadview" style="height:100%"></div> <!-- 로드뷰를 표시할 div 입니다 -->
+            <input type="button" id="btnMap" onclick="toggleMap('true')" title="지도 보기" value="지도">
+          </div>
+		    </div>
+		  </div>
+		</div>
+		
+	</div>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript"
+		src="http://apis.daum.net/maps/maps3.js?apikey=0c2dbec5e17d638bda6a4e1f8a0829a4&libraries=services"></script>
+	<script>
+		var winH = $(window).height();
+		var roomAddr;
+		var geocoder = new daum.maps.services.Geocoder(); // 주소-좌표 변환 객체를 생성합니다
+		var mm_container = document.getElementById('mm_container'), // 지도와 로드뷰를 감싸고 있는 div 입니다
+				mapWrapper = document.getElementById('mapWrapper'), // 지도를 감싸고 있는 div 입니다
+				btnRoadview = document.getElementById('btnRoadview'), // 지도 위의 로드뷰 버튼, 클릭하면 지도는 감춰지고 로드뷰가 보입니다 
+				btnMap = document.getElementById('btnMap'), // 로드뷰 위의 지도 버튼, 클릭하면 로드뷰는 감춰지고 지도가 보입니다 
+				rvContainer = document.getElementById('roadview'), // 로드뷰를 표시할 div 입니다
+				mapContainer = document.getElementById('map'), // 지도를 표시할 div 입니다
+				modalmapContainer = document.getElementById('mm_map'); // 모달용 지도표시 div
+		
+		// 지도와 로드뷰 위에 마커로 표시할 특정 장소의 좌표입니다 
+		var placePosition = new daum.maps.LatLng(33.450701, 126.570667);
+		// 지도 옵션입니다 
+		var mapOption = {
+			center : placePosition, // 지도의 중심좌표 
+			level : 3 // 지도의 확대 레벨
+		};
+
+		// 지도를 표시할 div와 지도 옵션으로 지도를 생성합니다
+		var map = new daum.maps.Map(mapContainer, mapOption);
+		var mm_map = new daum.maps.Map(modalmapContainer, mapOption);
+		var roadviewClient = new daum.maps.RoadviewClient();
+		// 로드뷰 객체를 생성합니다 
+		var roadview = new daum.maps.Roadview(rvContainer);
+		// 로드뷰의 위치를 특정 장소를 포함하는 파노라마 ID로 설정합니다
+		// 로드뷰의 파노라마 ID는 Wizard를 사용하면 쉽게 얻을수 있습니다 
+		//roadview.setPanoId(1023434522, placePosition);
+		// 	roadviewClient.getNearestPanoId(position, 50, function(panoId) {
+		// 	    roadview.setPanoId(panoId, position);
+		// 	});
+
+		// 특정 장소가 잘보이도록 로드뷰의 적절한 시점(ViewPoint)을 설정합니다 
+		// Wizard를 사용하면 적절한 로드뷰 시점(ViewPoint)값을 쉽게 확인할 수 있습니다
+		roadview.setViewpoint({
+			pan : 321,
+			tilt : 0,
+			zoom : 0
+		});
+
+		// 지도 중심을 표시할 마커를 생성하고 특정 장소 위에 표시합니다 
+// 		var mapMarker = new daum.maps.Marker({
+// 			position : placePosition,
+// 			map : map
+// 		});
+
+// 		로드뷰 초기화가 완료되면 
+// 		daum.maps.event.addListener(roadview, 'init', function() {
+
+// // 			로드뷰에 특정 장소를 표시할 마커를 생성하고 로드뷰 위에 표시합니다 
+// 			var rvMarker = new daum.maps.Marker({
+// 				position : placePosition,
+// 				map : roadview
+// 			});
+// 		});
+    $(".map_btn").on("click", function(event){
+			$("#modal_map").css({"display":"block"});
+			var active = $(this).attr("data-bool");
+			toggleMap(active);
+			mm_map.relayout();
+			 mm_map.setCenter(placePosition);
+    })
+    $("#mm_cbt").on("click", function(event){
+        $("#modal_map").css({"display":"none"});
+    })
+		// 지도와 로드뷰를 감싸고 있는 div의 class를 변경하여 지도를 숨기거나 보이게 하는 함수입니다 
+		function toggleMap(active) {
+	    if (active == "true") {
+	        // 지도가 보이도록 지도와 로드뷰를 감싸고 있는 div의 class를 변경합니다
+	        mm_container.className = "view_map"
+	    } else {
+	        // 지도가 숨겨지도록 지도와 로드뷰를 감싸고 있는 div의 class를 변경합니다
+	        mm_container.className = "view_roadview"
+	    }
+	  }
+
+    //JSON 파싱
+		$.ajax({
+			url : "items.json",
+			type : "GET",
+			dataType : "json",
+			success : function(data) {
+				var jsonArray = new Array();
+				var result = new Array();
+				for (var i = 0; i < data.datas.length; i++) {
+					jsonArray[i] = data.datas[i];
+				}
+				result[0] = jsonArray[0].building;
+				result[1] = jsonArray[0].agent_Info;
+				result[2] = jsonArray[0].inquiry;
+				result[3] = jsonArray[1].cost_Info;
+				result[4] = jsonArray[1].room_Info;
+				result[5] = jsonArray[1].others;
+				result[6] = jsonArray[1].detail_Desc;
+				var images = "";
+				for (var i = 0; i < result[4].room_img.length; i++) {
+					images+="<li class='img_li' data-index='"+i+"'><img class='r_img' data-index='"+i+
+					"' src='"+result[4].room_img[i].img+"'"+"alt='roomInside"+i+"'/></li>"
+				}
+				$("#office_img").attr("src", result[0].img);
+				$("#office_name").text(result[0].name);
+				$("#office_addr").text(result[0].address1+" "+result[0].address2+" "+result[0].address3);
+				$("#office_floor").text(result[0].floor);
+				$("#office_rooms").text(result[0].rooms);
+				$("#office_est").text(result[0].established);
+				$(".agent_name").text(result[1].name);
+				$(".agent_img").attr("src", result[1].img);
+				$(".agent_email").text(result[1].email);
+				$(".agent_tel").text(result[1].tel);
+				$(".tel_Btn").attr("href","tel:"+result[1].tel);
+				$("#office_address").text(result[1].address+", "+result[1].office+" ("+result[1].owner+")");
+				$("#office_call>span").text(result[1].office_tel);
+				$(".agent_word").html(result[1].agent_word);
+				$(".inquiry_office").text(result[2].office+"("+result[2].owner+")");
+				$(".inquiry_agent").text(result[2].position+"("+result[2].agent+")");
+				$(".inquiry_tel").text(result[2].tel);
+				$(".r_deposit>strong").text(result[3].deposit);
+				$(".r_rentsCost>strong").text(result[3].rentsCost);
+				$(".r_id").text(result[3].id);
+				$(".r_address,.r_addr").text(result[4].address1+" "+result[4].address2);
+				roomAddr = result[4].address1+" "+result[4].address2;
+				$(".r_nearStation").text(result[4].nearStation1+" "+result[4].nearStation2);
+				$("#imgSlider").html(images);
+				$(".r_floor").text(result[4].floor+"층/"+result[4].b_floor+"층");
+				$(".r_size").text(result[4].size1+" "+result[4].size2+" "+result[4].size3);
+				$(".r_structure").text(result[4].structure);
+				$(".r_form").text(result[4].form);
+				$(".r_intro").text(result[4].intro);
+				$(".r_option").text(result[5].options);
+				$(".r_maintenance").text(result[5].maintenance);
+				$(".r_maintenanceAdd").text(result[5].maintenanceAdd);
+				$(".r_parking").text(result[5].parking);
+				$(".r_elevator").text(result[5].elevator);
+				$(".r_date").text(result[5].date);
+				$(".r_desc").html(result[6].description);
+				// 매물 이미지 모달 클릭 이벤트
+				$(".img_li").on("click",function(event) {
+					var getDataIndex = $(this).attr("data-index");
+					var modal_img = 
+						"<img class='modal-img' data-index='"+getDataIndex+"' src='"+result[4].room_img[getDataIndex].img+"'>";
+					$(".modal_img").html(modal_img);
+					$("#Modal-Wrap").css({"display" : "block"});
+				});
+				
+				var imgWid = $(".r_img").width(); // 매물 이미지 너비
+				// 매물 이미지 모달 닫기
+				$("#modal_closeBtn").on("click", function(event) {
+					$("#imgSlider").attr("data-index",parseInt($(".modal-img").attr("data-index")));
+					$("#imgSlider").css({"transform" : "translate3d(-"+(parseInt($(".modal-img").attr("data-index")))*imgWid+"px,0px,0px)"});
+					$("#Modal-Wrap").css({"display" : "none"});
+				});
+				//슬라이드 back 버튼
+				$("#back").on("click",function(event) {
+					var slider_index = parseInt($("#imgSlider").attr("data-index"));
+					if (slider_index != 0) {
+						var slider_move = imgWid*(slider_index-1);
+						$("#imgSlider").css({"transform" : "translate3d(-"+slider_move+"px,0px,0px)"});
+						$("#imgSlider").attr("data-index",slider_index - 1);
+					}
+				});
+				// 슬라이드 next 버튼
+				$("#next").on("click",function(event) {
+					var slider_index = parseInt($("#imgSlider").attr("data-index"));
+					if (slider_index < result[4].room_img.length - 1) {
+						var slider_move = imgWid * (slider_index + 1);
+						$("#imgSlider").css({"transform" : "translate3d(-"+ slider_move+ "px,0px,0px)"});
+						$("#imgSlider").attr("data-index",slider_index + 1);
+					}
+				});
+				// 모달에서 슬라이드 next 버튼
+				$(".modal_next").on("click",function(event) {
+	        var ms_index = parseInt($(".modal-img").attr("data-index")) + 1;
+          if (ms_index < result[4].room_img.length - 1) {
+        	  m_slide_move(ms_index);
+          }
+	      });
+				// 모달에서 슬라이드 back 버튼
+				$(".modal_back").on("click",function(event) {
+	        var ms_index = parseInt($(".modal-img").attr("data-index")) - 1;
+          if (ms_index != 0) {
+            m_slide_move(ms_index);
+          }
+	      });
+				// 모달에서 슬라이드 move 
+		    function m_slide_move(ms_index) {
+		    	$(".modal-img").attr("src","");
+		      $(".modal-img").attr("src",result[4].room_img[ms_index].img);
+		      $(".modal-img").attr("data-index",ms_index);
+		    }
+				map_addr();
+			}
+		});
+    //String 주소를 위도 경도 값으로 바꾸고, 주소 인근으로 이동 함수
+		function map_addr() {
+			// 주소로 좌표를 검색합니다
+			geocoder.addr2coord(roomAddr, function(status, result) {
+			  // 정상적으로 검색이 완료됐으면 
+			  if (status === daum.maps.services.Status.OK) {
+			    var coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
+			    // 기본 지도의 위치 반경 객체
+			    var circle = new daum.maps.Circle({
+						center : coords,
+						radius: 50, // 미터 단위의 원의 반지름입니다 
+						strokeWeight: 0, // 선의 두께입니다 
+						strokeColor: '#f0ae78', // 선의 색깔입니다
+						strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+						strokeStyle: 'solid', // 선의 스타일 입니다
+						fillColor: '#f0ae78', // 채우기 색깔입니다
+						fillOpacity: 0.7  // 채우기 불투명도 입니다   
+			    });
+			    // 지도 모달에서의 위치 반경 객체
+			    var circle2 = new daum.maps.Circle({
+						center : coords,
+						radius: 50, // 미터 단위의 원의 반지름입니다 
+						strokeWeight: 0, // 선의 두께입니다 
+						strokeColor: '#f0ae78', // 선의 색깔입니다
+						strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+						strokeStyle: 'solid', // 선의 스타일 입니다
+						fillColor: '#f0ae78', // 채우기 색깔입니다
+						fillOpacity: 0.7  // 채우기 불투명도 입니다
+			    });
+			    // 지도에 원을 표시합니다 
+			    circle.setMap(map);
+			    circle2.setMap(mm_map);
+			    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+			    map.setCenter(coords);
+			    // 로드뷰 위치
+			    roadviewClient.getNearestPanoId(coords, 50,function(panoId) {roadview.setPanoId(panoId, coords);});
+			  }
+			});
+		}
+	</script>
+</body>
+</html>

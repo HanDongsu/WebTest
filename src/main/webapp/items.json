@@ -1,0 +1,69 @@
+{
+  "datas": [{
+    "building": {
+      "id": "18304",
+      "img": "https://zigbang.s3-ap-northeast-1.amazonaws.com/public/buildings/18304.jpg",
+      "name": "고려 아카데미 텔",
+      "address1": "서울시",
+      "address2": "마포구 아현동",
+      "address3": "437-3",
+      "floor": "17층",
+      "rooms": "356세대",
+      "established": "1987.11"
+    },
+    "agent_Info": {
+      "name": "설현",
+      "img": "i-img/agent_Photo.png",
+      "email": "okok@naver.com",
+      "tel": "010-1234-5678",
+      "address": "서울시 마포구",
+      "office": "테리부동산",
+      "owner": "김테리",
+      "office_tel": "1588-1688",
+      "agent_word": "공휴일 및 주말에도 언제든지 상담 가능<br>차량 픽업 서비스 가능<br>조건에 맞는 집 답사<br>상담부터 계약까지 고객 맞춤형 서비스"
+    },
+    "inquiry": {
+      "office": "직방Front-end지원",
+      "owner": "한동수",
+      "agent": "한동수",
+      "tel": "010-3164-6344",
+      "position" : "신입개발자"
+    }
+  }, {
+    "cost_Info": {
+      "deposit": "10000",
+      "rentsCost": "100",
+      "id": "1234567"
+    },
+    "room_Info": {
+      "address1": "서울시",
+      "address2": "강남구 신사동",
+      "nearStation1": "신사역(3호선)",
+      "nearStation2": "압구정역(7호선)",
+      "room_img": [{"img":"i-img/room_inside1.jpg"},
+      {"img":"i-img/room_inside2.jpeg"},
+      {"img":"i-img/room_inside3.jpeg"},
+      {"img":"i-img/room_inside4.jpeg"},
+      {"img":"i-img/room_inside5.jpeg"}],
+      "floor": "3",
+      "b_floor": "4",
+      "size1" : "전용면적",
+      "size2": "60.10m²",
+      "size3": "18.18P",
+      "structure": "쓰리룸",
+      "form": "다세대/다가구",
+      "intro": "신사동 예쁜 쓰리룸"
+    },
+    "others": {
+      "options": "옷장",
+      "maintenance": "없음",
+      "maintenanceAdd": "수도",
+      "parking": "불가능",
+      "elevator": "없음",
+      "date": "4월 21일"
+    },
+    "detail_Desc": {
+      "description": "거실과 방이 크게 나온 신사동 3룸 입니다 ^^<br>남향집이고 해가 너무 잘들고 근 건물둘에 비해서 집이 깨끗하고 뷰도 좋은 편입니다.<br>가격은 주인 분과 상의 후에 조정 가능합니다!!<br>깔끔하고 좋은 집 보러 연락주세요!"
+    }
+  }]
+}
