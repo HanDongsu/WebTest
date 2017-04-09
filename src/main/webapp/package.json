@@ -1,0 +1,32 @@
+{
+  "name": "webtest",
+  "version": "1.0.0",
+  "description": "webpage Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HanDongsu/WebTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HanDongsu/WebTest/issues"
+  },
+  "homepage": "https://github.com/HanDongsu/WebTest#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "express-error-handler": "^1.1.0",
+    "express-session": "^1.15.2",
+    "http": "0.0.0",
+    "passport": "^0.3.2",
+    "path": "^0.12.7",
+    "socket.io": "^1.7.3"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "express-error-handler": "^1.1.0",
+    "express-session": "^1.15.2",
+    "http": "0.0.0",
+    "jquery": "^3.2.1",
+    "passport": "^0.3.2",
+    "path": "^0.12.7",
+    "socket.io": "^1.7.3"
+  }
+}
